@@ -15,21 +15,53 @@
 		
 		var random_word_array = random_word.split('');
 		
-		console.log("Computer's word:" + random_word_array);
+		console.log("Secret Code:" + random_word_array);
 		
 		$('button').click(function() {
 			
 			var match_count = 0;
 			var guess = $('#guess').val();
 			var guess_array = guess.split('');
-			
+			var positions_matched='';
+
 			for(i in guess_array) {
 				var letter = guess_array[i];
 				
 				var position = $.inArray(letter,random_word_array);
 				
 				if(position >= 0) {
-					match_count++;
+				//	match_count++;
+
+					// find where it matches 
+			//		var positions = position + 1;
+
+			//		positions_matched = positions_matched + positions;
+				}
+			
+			}
+			
+			for(i in guess_array) {
+				var letter1 = guess_array[i];
+				var letter2 = random_word_array[i];
+
+			//	var position = $.inArray(letter,random_word_array);
+				
+				if(letter1 == letter2) {
+				//	match_count++;
+
+					// find where it matches 
+					console.log(i);
+					
+					positions_matched = positions_matched + 'BLACK';
+				}
+				else if($.inArray(letter1,random_word_array)>-1) {
+					
+					positions_matched = positions_matched + 'WHITE';
+
+				}
+				else {
+					positions_matched = positions_matched + '-----';	
+
 				}
 			
 			}
@@ -37,7 +69,7 @@
 			if(guess == random_word) {
 				$('#output').prepend('You guessed the word!' + random_word + '<br>');
 			}
-			$('#output').prepend(guess + ':' + match_count + '<br>');
+			$('#output').prepend(guess + ':' + match_count + ':' + positions_matched + '<br>');
 			//console.log(match_count);
 			
 			
