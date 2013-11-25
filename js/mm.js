@@ -1,15 +1,7 @@
-	var words = Array(
-			'apple',
-			'grape',
-			'crypt',
-			'death',
-			'puppy',
-			'light'
-		);
-		
+
 		//var how_many_words = words.length;
-		var how_many_words=5;
-		var random_number  = Math.floor((Math.random()*how_many_words)+0);
+		//var how_many_colors=5;
+		//var random_number  = Math.floor((Math.random()*how_many_colors)+0);
 		var random_word = makecode();
 		//var random_word    = words[random_number];
 		
@@ -18,10 +10,15 @@
 		console.log("Secret Code:" + random_word_array);
 		
 		$('button').click(function() {
-			
+			var text_new = $('#Color1').val()+$('#Color2').val()+$('#Color3').val()+$('#Color4').val()+$('#Color5').val();
+			console.log(text_new);
+
 			var match_count = 0;
-			var guess = $('#guess').val();
+			//var guess = $('#guess').val();
+			//var guess_array = guess.split('');
+			var guess = text_new;
 			var guess_array = guess.split('');
+			
 			var positions_matched='';
 
 			for(i in guess_array) {
@@ -80,9 +77,9 @@
 	
 	{
     var text = "";
-    var possible = "rgbwpoly";
-
-    for( var i=0; i < 5; i++ )
+    var possible = "RGBWPOLY";
+	var how_many_colors=5;
+    for( var i=0; i < how_many_colors; i++ )
         text += possible.charAt(Math.floor(Math.random() * possible.length));
 
     return text;	
