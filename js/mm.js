@@ -1,16 +1,24 @@
 
-		//var how_many_words = words.length;
-		//var how_many_colors=5;
-		//var random_number  = Math.floor((Math.random()*how_many_colors)+0);
 		var random_word = makecode();
-		//var random_word    = words[random_number];
 		var text_new="";
+		
 		var random_word_array = random_word.split('');
 		
 		var positions_matched;
 
+		//show in the console what is the color combination
+
 		console.log("Secret Code:" + random_word_array);
 		
+		//initialize the colors
+
+		$('#Colo1').css('background-color',$('#Color1 option:selected').html());
+		$('#Colo2').css('background-color',$('#Color2 option:selected').html());
+		$('#Colo3').css('background-color',$('#Color3 option:selected').html());
+		$('#Colo4').css('background-color',$('#Color4 option:selected').html());
+		$('#Colo5').css('background-color',$('#Color5 option:selected').html());
+
+
 		 $('#Color1').change(function() {
                        
 			$('#Colo1').css('background-color',$('#Color1 option:selected').html());
