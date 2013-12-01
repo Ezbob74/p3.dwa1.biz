@@ -13,67 +13,78 @@
 
 <body>
 
-	<input type='text' id='guess'>
-	
-	
-	<BR>
-	Color 1:
-	<select id='Color1'>
-		<option value='R'>Red</option>
-		<option value='G'>Green</option>
-		<option value='B'>Black</option>
-		<option value='W'>White</option>
-		<option value='P'>Pink</option>
-		<option value='O'>Orange</option>
-		<option value='L'>Blue</option>
-		<option value='Y'>Yellow</option>
-	</select>
-Color 2:
-	<select id='Color2'>
-		<option value='R'>Red</option>
-		<option value='G'>Green</option>
-		<option value='B'>Black</option>
-		<option value='W'>White</option>
-		<option value='P'>Pink</option>
-		<option value='O'>Orange</option>
-		<option value='L'>Blue</option>
-		<option value='Y'>Yellow</option>
-	</select>
-	Color 3:
-	<select id='Color3'>
-		<option value='R'>Red</option>
-		<option value='G'>Green</option>
-		<option value='B'>Black</option>
-		<option value='W'>White</option>
-		<option value='P'>Pink</option>
-		<option value='O'>Orange</option>
-		<option value='L'>Blue</option>
-		<option value='Y'>Yellow</option>
-	</select>
-Color 4:
-	<select id='Color4'>
-		<option value='R'>Red</option>
-		<option value='G'>Green</option>
-		<option value='B'>Black</option>
-		<option value='W'>White</option>
-		<option value='P'>Pink</option>
-		<option value='O'>Orange</option>
-		<option value='L'>Blue</option>
-		<option value='Y'>Yellow</option>
-	</select>
-Color 5:
-	<select id='Color5'>
-		<option value='R'>Red</option>
-		<option value='G'>Green</option>
-		<option value='B'>Black</option>
-		<option value='W'>White</option>
-		<option value='P'>Pink</option>
-		<option value='O'>Orange</option>
-		<option value='L'>Blue</option>
-		<option value='Y'>Yellow</option>
-	</select>
-	
-	<button>Guess!</button>
+	<div>	
+		<BR>
+		Color 1:
+		<select class='coloroptions' name='coloro' id='Color1'>
+			<option value='R'>Red</option>
+			<option value='G'>Green</option>
+			<option value='B'>Black</option>
+			<option value='W'>White</option>
+			<option value='P'>Pink</option>
+			<option value='O'>Orange</option>
+			<option value='L'>Blue</option>
+			<option value='Y'>Yellow</option>
+		</select>
+		Color 2:
+		<select class='coloroptions' id='Color2'>
+			<option value='R'>Red</option>
+			<option value='G'>Green</option>
+			<option value='B'>Black</option>
+			<option value='W'>White</option>
+			<option value='P'>Pink</option>
+			<option value='O'>Orange</option>
+			<option value='L'>Blue</option>
+			<option value='Y'>Yellow</option>
+		</select>
+		Color 3:
+		<select id='Color3'>
+			<option value='R'>Red</option>
+			<option value='G'>Green</option>
+			<option value='B'>Black</option>
+			<option value='W'>White</option>
+			<option value='P'>Pink</option>
+			<option value='O'>Orange</option>
+			<option value='L'>Blue</option>
+			<option value='Y'>Yellow</option>
+		</select>
+		Color 4:
+		<select id='Color4'>
+			<option value='R'>Red</option>
+			<option value='G'>Green</option>
+			<option value='B'>Black</option>
+			<option value='W'>White</option>
+			<option value='P'>Pink</option>
+			<option value='O'>Orange</option>
+			<option value='L'>Blue</option>
+			<option value='Y'>Yellow</option>
+		</select>
+		Color 5:
+		<select id='Color5'>
+			<option value='R'>Red</option>
+			<option value='G'>Green</option>
+			<option value='B'>Black</option>
+			<option value='W'>White</option>
+			<option value='P'>Pink</option>
+			<option value='O'>Orange</option>
+			<option value='L'>Blue</option>
+			<option value='Y'>Yellow</option>
+		</select>
+		
+		<button>Guess!</button>
+
+	</div>
+	<BR><BR>
+
+	<div id='input2'>
+		<div class='colors' id='Colo1'></div>
+		<div class='colors' id='Colo2'></div>
+		<div class='colors' id='Colo3'></div>
+		<div class='colors' id='Colo4'></div>
+		<div class='colors' id='Colo5'></div>
+	</div>
+
+	<BR><BR><BR><BR>
 
 	<div id='output'></div>
 

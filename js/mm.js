@@ -11,6 +11,39 @@
 
 		console.log("Secret Code:" + random_word_array);
 		
+		 $('#Color1').change(function() {
+                       
+			$('#Colo1').css('background-color',$('#Color1 option:selected').html());
+			
+		});
+
+		$('#Color2').change(function() {
+                       
+			$('#Colo2').css('background-color',$('#Color2  option:selected').html());
+			
+		});
+		
+		$('#Color3').change(function() {
+                       
+			$('#Colo3').css('background-color',$('#Color3  option:selected').html());
+			
+		});
+
+		$('#Color4').change(function() {
+                       
+			$('#Colo4').css('background-color',$('#Color4  option:selected').html());
+			
+		});
+
+		$('#Color5').change(function() {
+                       
+			$('#Colo5').css('background-color',$('#Color5  option:selected').html());
+			
+		});
+
+
+
+
 		$('button').click(function() {
 			text_new = $('#Color1').val()+$('#Color2').val()+$('#Color3').val()+$('#Color4').val()+$('#Color5').val();
 			console.log(text_new);
@@ -66,12 +99,12 @@
 			}
 			
 			if(guess == random_word) {
-				$('#output').prepend('You guessed the word!' + random_word + '<br>');
+				$('#input2').prepend('You are the MasterMind! <br>');
 			}
 			
 			//$('#output').prepend(guess + ':' + match_count + ':' + positions_matched + '<br>');
 			//console.log(match_count);
-			$('#output').prepend(makedisplay()+'<br><br>');
+			$('#output').prepend(makedisplay()+'<BR><BR>');
 			
 		});
 
@@ -100,11 +133,20 @@
     var display_array = display.split('');
     var match_array = displaymatch.split('');   
 
-            for(i in display_array) {
+            
+
+	return "<div>"+makediv('colors',display_array)+makediv('match',match_array)+"</div><br><br>";	
+	}
+
+	function makediv(d_class,d_array){
+		
+		var display='',displaycolor='';
+
+		for(i in d_array) {
             	displaycolor='blue';
-            	console.log(display_array[i]);
+            	//console.log(display_array[i]);
             	
-            	switch (display_array[i]) {
+            	switch (d_array[i]) {
             		case 'R':
             		displaycolor='red';
             		break;
@@ -136,40 +178,18 @@
             		case 'Y':
             		displaycolor='yellow';
             		break;
+
+					case 'N':
+            		displaycolor='none';
+            		break;
+
             	}
 			
 	
-
-
-
-            display= display + '<div class="colors" id='+ displaycolor +'></div>';
+            display= display + '<div class='+ d_class +' id='+ displaycolor +'></div>';
               
 			}
 
-
-				for(i in match_array) {
-            	matchcolor='blue';
-            	console.log(match_array[i]);
-            	
-            	switch (match_array[i]) {
-            		case 'B':
-            		matchcolor='black';
-            		break;
-            		
-            		case 'W':
-            		matchcolor='white';
-            		break;
-
-            		case 'N':
-            		matchcolor='none';
-            		break;
-
-           		
-            	}
-			
-			   displaymatch= displaymatch + '<div class="match" id='+ matchcolor +'></div>';
-              
-			}
-	
-	return "<div>"+display+displaymatch+"</div>";	
+		return display;	
 	}
+
