@@ -17,7 +17,7 @@
 		$('#Colo3').css('background-color',$('#Color3 option:selected').html());
 		$('#Colo4').css('background-color',$('#Color4 option:selected').html());
 		$('#Colo5').css('background-color',$('#Color5 option:selected').html());
-
+		$('#guess').attr('disabled',false);
 
 		 $('#Color1').change(function() {
                        
@@ -54,26 +54,17 @@
 
 		$('#guess').click(function() {
 			game_count++;
+			
 			text_new = $('#Color1').val()+$('#Color2').val()+$('#Color3').val()+$('#Color4').val()+$('#Color5').val();
-			console.log(text_new);
+			
 			positions_matched='';
 			
 			
-			//var guess = $('#guess').val();
-			//var guess_array = guess.split('');
 			var guess = text_new;
 			var guess_array = guess.split('');
 			
 			var games_left= 0;
 
-			//for(i in guess_array) {
-			//	var letter = guess_array[i];
-				
-			//	var position = $.inArray(letter,random_word_array);
-				
-							
-			//}
-			
 			for(i in guess_array) {
 				var letter1 = guess_array[i];
 				var letter2 = random_word_array[i];
@@ -101,23 +92,20 @@
 			} //close for loop that builds matching Black, White and Grey 
 			
 			if(guess == random_word) {
+				//game finished , disable guess button 
 				$('#input2').prepend('You are the MasterMind! <br>');
+				$('#guess').attr('disabled',true);
 			}
 			
 			
 			games_left=12- game_count;
 			
-			if(games_left == 0) {
-				$('#recipient-error').css('color','red');
-			}
-			else if(games_left < 5) {
-				$('#recipient-error').css('color','orange');
-			}
-
-			$('#output').prepend('<div id="recipient-error">You have ' + games_left + ' guesses left</div>' +makedisplay()+'<BR><BR>');
+			$('#output').prepend('You have ' + games_left + ' guesses left' +makedisplay()+'<BR><BR>');
 			
+			//disable guess button if there is no games left
+
 			if(games_left==0)
-				$('#guess').hide();
+				$('#guess').attr('disabled',true);
 
 		});
 
@@ -153,7 +141,7 @@
 
 	return "<div>"+makediv('colors',display_array)+makediv('match',match_array)+"</div><br><br>";	
 	}
-// make divs for displaying results colors
+// make divs for displaying results in divs with colors
 
 	function makediv(d_class,d_array){
 		
