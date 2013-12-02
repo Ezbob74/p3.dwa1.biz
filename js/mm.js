@@ -3,7 +3,7 @@
 		var text_new="";
 		
 		var random_word_array = random_word.split('');
-		
+		var game_count = 0;
 		var positions_matched;
 
 		//show in the console what is the color combination
@@ -52,39 +52,33 @@
 
 
 
-		$('button').click(function() {
+		$('#guess').click(function() {
+			game_count++;
 			text_new = $('#Color1').val()+$('#Color2').val()+$('#Color3').val()+$('#Color4').val()+$('#Color5').val();
 			console.log(text_new);
 			positions_matched='';
-			var match_count = 0;
+			
+			
 			//var guess = $('#guess').val();
 			//var guess_array = guess.split('');
 			var guess = text_new;
 			var guess_array = guess.split('');
 			
-			
+			var games_left= 0;
 
-			for(i in guess_array) {
-				var letter = guess_array[i];
+			//for(i in guess_array) {
+			//	var letter = guess_array[i];
 				
-				var position = $.inArray(letter,random_word_array);
+			//	var position = $.inArray(letter,random_word_array);
 				
-				if(position >= 0) {
-				//	match_count++;
-
-					// find where it matches 
-			//		var positions = position + 1;
-
-			//		positions_matched = positions_matched + positions;
-				}
-			
-			}
+							
+			//}
 			
 			for(i in guess_array) {
 				var letter1 = guess_array[i];
 				var letter2 = random_word_array[i];
 
-			//	var position = $.inArray(letter,random_word_array);
+			
 				
 				if(letter1 == letter2) {
 				//	match_count++;
@@ -104,23 +98,36 @@
 					positions_matched = positions_matched + 'N';	
 				}
 			
-			}
+			} //close for loop that builds matching Black, White and Grey 
 			
 			if(guess == random_word) {
 				$('#input2').prepend('You are the MasterMind! <br>');
 			}
 			
-			//$('#output').prepend(guess + ':' + match_count + ':' + positions_matched + '<br>');
-			//console.log(match_count);
-			$('#output').prepend(makedisplay()+'<BR><BR>');
 			
+			games_left=12- game_count;
+			
+			if(games_left == 0) {
+				$('#recipient-error').css('color','red');
+			}
+			else if(games_left < 5) {
+				$('#recipient-error').css('color','orange');
+			}
+
+			$('#output').prepend('<div id="recipient-error">You have ' + games_left + ' guesses left</div>' +makedisplay()+'<BR><BR>');
+			
+			if(games_left==0)
+				$('#guess').hide();
+
 		});
 
 // choose a pattern of 5 codes from 8 colors
+
 	function makecode()
 	
 	{
     var text = "";
+    // colors are : Red Green Black White Pink Orange bLue and Yellow
     var possible = "RGBWPOLY";
 	var how_many_colors=5;
     for( var i=0; i < how_many_colors; i++ )
@@ -128,6 +135,7 @@
 
     return text;	
 	}
+// build the response from the guess and the matches
 
 	function makedisplay()
 
@@ -145,6 +153,7 @@
 
 	return "<div>"+makediv('colors',display_array)+makediv('match',match_array)+"</div><br><br>";	
 	}
+// make divs for displaying results colors
 
 	function makediv(d_class,d_array){
 		
@@ -200,4 +209,9 @@
 
 		return display;	
 	}
+//reset game
+	$('#newgame').click(function(){
+			location.reload();
+	});
+
 
