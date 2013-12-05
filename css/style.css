@@ -119,3 +119,64 @@ a.nav-link:active
       color: #222731;
       text-decoration: none;
 }
+/*-------------------------------------------------------------------------------------------------
+Small Circles and their colors
+-------------------------------------------------------------------------------------------------*/
+.colors {
+  width:40px;
+  height:40px;
+  float:left;
+  margin-right:3px;
+  cursor:pointer;
+  border:1px solid black;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+
+}
+.match {
+  width:10px;
+  height:10px;
+  float:left;
+  margin-right:3px;
+  cursor:pointer;
+  border:1px solid black;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+#red {
+  background-color:red;
+}
+
+#orange {
+  background-color:orange;
+}
+
+#green {
+  background-color:green;
+}
+
+#black {
+  background-color:black;
+}
+
+#white {
+  background-color:white;
+}
+
+#pink {
+  background-color:pink;
+}
+
+#blue {
+  background-color:blue;
+}
+
+#yellow {
+  background-color:yellow;
+}
+#none {
+  background-color:grey;
+}
+
