@@ -43,7 +43,7 @@
 		  <li>Start a new game by clicking on the 'New Game' button. </li>
 		</ul> 
 	</div>
-	<a class="nav-link" href='http://en.wikipedia.org/wiki/Mastermind_%28board_game%29'>Click here to see the wikipedia page for this game</a>
+	<a class="nav-link" target='_blank' href='http://en.wikipedia.org/wiki/Mastermind_%28board_game%29'>Click here to see the wikipedia page for this game</a>
 
 </div>
 <!--Display footer-->
