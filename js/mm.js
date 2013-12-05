@@ -1,51 +1,53 @@
 
+		// get a random color pattern
 		var random_word = makecode();
 		var text_new="";
 		
+		//put them in array of single words
 		var random_word_array = random_word.split('');
 		var game_count = 0;
 		var positions_matched;
 
-		//show in the console what is the color combination
+		//show in the console what is the color combination 
 
 		console.log("Secret Code:" + random_word_array);
 		
 		//initialize the colors
 
-		$('#Colo1').css('background-color',$('#Color1 option:selected').html());
-		$('#Colo2').css('background-color',$('#Color2 option:selected').html());
-		$('#Colo3').css('background-color',$('#Color3 option:selected').html());
-		$('#Colo4').css('background-color',$('#Color4 option:selected').html());
-		$('#Colo5').css('background-color',$('#Color5 option:selected').html());
+		$('#Color-input1').css('background-color',$('#Color1 option:selected').html());
+		$('#Color-input2').css('background-color',$('#Color2 option:selected').html());
+		$('#Color-input3').css('background-color',$('#Color3 option:selected').html());
+		$('#Color-input4').css('background-color',$('#Color4 option:selected').html());
+		$('#Color-input5').css('background-color',$('#Color5 option:selected').html());
 		$('#guess').attr('disabled',false);
 
 		 $('#Color1').change(function() {
                        
-			$('#Colo1').css('background-color',$('#Color1 option:selected').html());
+			$('#Color-input1').css('background-color',$('#Color1 option:selected').html());
 			
 		});
 
 		$('#Color2').change(function() {
                        
-			$('#Colo2').css('background-color',$('#Color2  option:selected').html());
+			$('#Color-input2').css('background-color',$('#Color2  option:selected').html());
 			
 		});
 		
 		$('#Color3').change(function() {
                        
-			$('#Colo3').css('background-color',$('#Color3  option:selected').html());
+			$('#Color-input3').css('background-color',$('#Color3  option:selected').html());
 			
 		});
 
 		$('#Color4').change(function() {
                        
-			$('#Colo4').css('background-color',$('#Color4  option:selected').html());
+			$('#Color-input4').css('background-color',$('#Color4  option:selected').html());
 			
 		});
 
 		$('#Color5').change(function() {
                        
-			$('#Colo5').css('background-color',$('#Color5  option:selected').html());
+			$('#Color-input5').css('background-color',$('#Color5  option:selected').html());
 			
 		});
 
@@ -75,7 +77,6 @@
 				//	match_count++;
 
 					// find where it matches 
-					console.log(i);
 					// It is Black meaning it is a match						
 					positions_matched = positions_matched + 'B';
 				}
@@ -149,7 +150,7 @@
 
 		for(i in d_array) {
             	displaycolor='blue';
-            	//console.log(display_array[i]);
+            	
             	
             	switch (d_array[i]) {
             		case 'R':

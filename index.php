@@ -17,10 +17,10 @@
 <div id="header">Mastermind Game
     </div>
 <div   id='center'>
-	<div>	
+	<div>	<!--Display Color options-->
 		<BR>
 		Color 1:
-		<select class='coloroptions' id='Color1'>
+		<select id='Color1'>
 			<option value='R'>Red</option>
 			<option value='G'>Green</option>
 			<option value='B'>Black</option>
@@ -31,7 +31,7 @@
 			<option value='Y'>Yellow</option>
 		</select>
 		Color 2:
-		<select class='coloroptions' id='Color2'>
+		<select id='Color2'>
 			<option value='R'>Red</option>
 			<option value='G'>Green</option>
 			<option value='B'>Black</option>
@@ -82,11 +82,11 @@
 	<BR><BR>
 
 	<div id='input2'>
-		<div class='colors' id='Colo1'></div>
-		<div class='colors' id='Colo2'></div>
-		<div class='colors' id='Colo3'></div>
-		<div class='colors' id='Colo4'></div>
-		<div class='colors' id='Colo5'></div>
+		<div class='colors' id='Color-input1'></div>
+		<div class='colors' id='Color-input2'></div>
+		<div class='colors' id='Color-input3'></div>
+		<div class='colors' id='Color-input4'></div>
+		<div class='colors' id='Color-input5'></div>
 	</div>
 
 	<BR><BR><BR><BR>
