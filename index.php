@@ -92,7 +92,7 @@
 		<div class='colors' id='Color-input4'></div>
 		<div class='colors' id='Color-input5'></div>
 	</div>
-	<label><--- Current Guess</label>
+	<label>&lt;--- Current Guess</label>
 	<BR><BR><BR><BR>
 
 	<div id='output'></div>
