@@ -97,29 +97,6 @@ Organizes Forms look
      clear: both;
     }
 /*-------------------------------------------------------------------------------------------------
-Links
--------------------------------------------------------------------------------------------------*/
-a.nav-link:link
-{
-      color: #222731;
-      text-decoration: none;
-}
-a.nav-link:visited
-{
-      color: #222731;
-      text-decoration: none;
-}
-a.nav-link:hover
-{
-      color: #6699FF;
-      text-decoration: underline;
-}
-a.nav-link:active
-{
-      color: #222731;
-      text-decoration: none;
-}
-/*-------------------------------------------------------------------------------------------------
 Small Circles and their colors
 -------------------------------------------------------------------------------------------------*/
 .colors {
@@ -179,4 +156,29 @@ Small Circles and their colors
 #none {
   background-color:grey;
 }
+
+/*-------------------------------------------------------------------------------------------------
+Links
+-------------------------------------------------------------------------------------------------*/
+a.nav-link:link
+{
+      color: #222731;
+      text-decoration: none;
+}
+a.nav-link:visited
+{
+      color: #222731;
+      text-decoration: none;
+}
+a.nav-link:hover
+{
+      color: #6699FF;
+      text-decoration: underline;
+}
+a.nav-link:active
+{
+      color: #222731;
+      text-decoration: none;
+}
+
 

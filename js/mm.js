@@ -1,4 +1,3 @@
-
 // Mastermind game:  http://en.wikipedia.org/wiki/Mastermind_%28board_game%29
 
 // get a random color pattern
@@ -42,36 +41,7 @@ function makecode(){
 	return text;	
 }
 
-//set matching color on circles when the option is changed 
- $('#Color1').change(function() {
-               
-	$('#Color-input1').css('background-color',$('#Color1 option:selected').html());
-	
-});
-//set matching color on circles when the option is changed 
-$('#Color2').change(function() {
-               
-	$('#Color-input2').css('background-color',$('#Color2  option:selected').html());
-	
-});
-//set matching color on circles when the option is changed 
-$('#Color3').change(function() {
-               
-	$('#Color-input3').css('background-color',$('#Color3  option:selected').html());
-	
-});
-//set matching color on circles when the option is changed 
-$('#Color4').change(function() {
-               
-	$('#Color-input4').css('background-color',$('#Color4  option:selected').html());
-	
-});
-//set matching color on circles when the option is changed 
-$('#Color5').change(function() {
-               
-	$('#Color-input5').css('background-color',$('#Color5  option:selected').html());
-	
-});
+
 
 
 //When Check button is clicked  
@@ -207,6 +177,39 @@ for(i in d_array) {
 
 return display;	
 }
+
+
+//set matching color on circles when the option is changed 
+ $('#Color1').change(function() {
+               
+	$('#Color-input1').css('background-color',$('#Color1 option:selected').html());
+	
+});
+//set matching color on circles when the option is changed 
+$('#Color2').change(function() {
+               
+	$('#Color-input2').css('background-color',$('#Color2  option:selected').html());
+	
+});
+//set matching color on circles when the option is changed 
+$('#Color3').change(function() {
+               
+	$('#Color-input3').css('background-color',$('#Color3  option:selected').html());
+	
+});
+//set matching color on circles when the option is changed 
+$('#Color4').change(function() {
+               
+	$('#Color-input4').css('background-color',$('#Color4  option:selected').html());
+	
+});
+//set matching color on circles when the option is changed 
+$('#Color5').change(function() {
+               
+	$('#Color-input5').css('background-color',$('#Color5  option:selected').html());
+	
+});
+
 //reset game
 
 $('#newgame').click(function(){
